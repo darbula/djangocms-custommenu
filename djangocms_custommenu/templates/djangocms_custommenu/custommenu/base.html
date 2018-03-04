@@ -1,0 +1,7 @@
+{% if instance.menu_type == "show_menu" %}
+  {% include "djangocms_custommenu/custommenu/show_menu.html" %}
+{% elif instance.menu_type == "show_menu_below_id" %}
+  {% include "djangocms_custommenu/custommenu/show_menu_below_id.html" %}
+{% elif instance.menu_type == "show_sub_menu" %}
+  {% include "djangocms_custommenu/custommenu/show_sub_menu.html" %}
+{% endif %}

@@ -1,0 +1,10 @@
+{% load menu_tags %}
+{% if instance.root_page %}
+  {% if instance.root_page.reverse_id %}
+    {% show_menu_below_id instance.root_page.reverse_id instance.start_level instance.end_level instance.extra_inactive instance.extra_active instance.get_menu_template %}
+  {% else %}
+    <p>Please define ID in the advanced settings of the page {{ instance.root_page.get_title }}.</p>
+  {% endif %}
+{% else %}
+    <p>For menu type 'Show menu below page' root page must be selected in the plugin settings.</p>
+{% endif %}

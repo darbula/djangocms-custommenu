@@ -1,0 +1,11 @@
+{% load i18n sekizai_tags %}
+
+{% addtoblock 'js' %}
+<script type="text/javascript">
+jQuery(function() {
+  populateAutomenu({{ instance.id }}, '{{ instance.selector }}');
+})
+</script>
+{% endaddtoblock %}
+
+<div id="automenu-{{ instance.id }}" class="automenu"></div>

@@ -1,0 +1,10 @@
+{% load menu_tags %}
+
+
+
+
+{% if instance.root_page and instance.root_page.reverse_id %}
+  {% show_menu instance.start_level instance.end_level instance.extra_inactive instance.extra_active instance.get_menu_template "None" instance.root_page.reverse_id %}
+{% else %}
+  {% show_menu instance.start_level instance.end_level instance.extra_inactive instance.extra_active instance.get_menu_template %}
+{% endif %}
