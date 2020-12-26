@@ -47,7 +47,8 @@ class CustomMenu(CMSPlugin):
         null=True,
         help_text=_("Menu tree starts from this page. "
                     "Warning: selected page MUST have its ID set in "
-                    "advanced settings."))
+                    "advanced settings."),
+	on_delete=models.SET_NULL)
     start_level = models.PositiveSmallIntegerField(
         _("Start level"),
         default=0,
